@@ -1,8 +1,8 @@
-import Rotas from './Rotas'
+import Routes from './Routes'
 
 function App() {
   return (
-    <Rotas />
+    <Routes />
   )
 }
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('price', 8,2);
             $table->decimal('rentValue', 8,2);
-            $table->string('plataform');
+            $table->string('platform');
             $table->string('genre');
             $table->date('releaseDate');
             $table->boolean('isRented')->default(false);

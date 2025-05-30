@@ -10,14 +10,14 @@ export default function Layout() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/sobre">Sobre</Link>
+                        <Link to="/about">About</Link>
                     </li>
                 </ul>
             </nav>
             <div className="grade">
-                <div className="lateral">x</div>
-                <Outlet />
-                <div className="lateral">y</div>
+                <div className="side">x</div>
+                <Outlet />{/* Página correspondente ao link selecionado é exibida aqui. */ }
+                <div className="side">y</div>
             </div>
         </div>
     )

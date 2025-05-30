@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'Clair Obscur: Expedition 33', 
             'price'=>170.00,
             'rentValue'=>50,
-            'plataform'=>'PS5',
+            'platform'=>'PS5',
             'genre'=>'RPG',
             'releaseDate'=>'2025-04-24', 
             'isRented'=> true
