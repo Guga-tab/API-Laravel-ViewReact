@@ -1,4 +1,5 @@
 import axios from "axios"
+import '../Layout/Layout.scss'
 import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -19,8 +20,8 @@ export default function GameCreate(){
     return (
         <div>
             <form onSubmit={ record }>
-                name: <input ref={name} type="text" maxlength={"100"} required />
-                price: <input ref={price} type="number" step="0.01" required />
+                Name: <input ref={name} type="text" maxlength={"100"} required />
+                Price: <input ref={price} type="number" step="0.01" required />
                 Rent Value: <input ref={rentValue} type="number" step="0.01" required />
                 Platform: <input ref={platform} type="text" maxlength={"100"} required />
                 Genre: <input ref={genre}  type="text" maxlength={"100"} required />
@@ -29,7 +30,7 @@ export default function GameCreate(){
                 <button type="submit">Submit</button>
             </form>
             <h3>{status}</h3>
-            <Link to="/game">Back</Link>
+            <Link to="/game" className="lBack">Back</Link>
         </div>
     )
 

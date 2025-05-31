@@ -1,26 +1,166 @@
-$corFundo: yellow;
+$corFundo: rgb(5, 110, 124);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+
+    th,
+    td {
+      border: 2px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #d6d6d6;
+    }
+
+    tbody tr {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(255, 193, 117);
+  font-weight: bold;
+  transition: 0.3s;
+  padding-left: 5px;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.lBack{
+   text-decoration: none;
+  color: rgb(255, 193, 117);
+  font-weight: bold;
+  transition: 0.3s;
+  padding-left: 8px;
+
+  &:hover {
+    color: orange;
+  } 
+}
+
 .menu {
     background-color: $corFundo;
+    padding: 18px;
+    ul{
+        display: flex;
+
+    }
     li{
         display: inline;
+        padding-right: 8px;
         a{
             text-decoration: none;
+            color: bisque;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        a:hover{
+            color: rgba(255, 228, 196, 0.5);
         }
     }
 }
 .grade{
     display: flex; flex-direction: row; justify-content: space-between;
-    div{
+    div.main{
         width: 90%;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.308);
     }
     div.side{
         width: 5%;
         height: 100vh;
-        background-color: darkblue;
     }
+}
+
+
+form {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-left: 4px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+    background-color: rgb(5, 110, 124);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgb(3, 90, 100);
+    }
+  }
+}
+
+h3 {
+  margin-top: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(165, 42, 42);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgb(139, 0, 0);
+  }
+}
+
+a {
+  margin-top: 12px;
+  text-decoration: none;
+  color: rgb(5, 110, 124);
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+    color: rgb(3, 90, 100);
+  }
 }

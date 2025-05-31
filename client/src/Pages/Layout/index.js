@@ -15,9 +15,11 @@ export default function Layout() {
                 </ul>
             </nav>
             <div className="grade">
-                <div className="side">x</div>
-                <Outlet />{/* Página correspondente ao link selecionado é exibida aqui. */ }
-                <div className="side">y</div>
+                <div className="side"></div>
+                <div className="main">
+                    <Outlet />
+                </div>{/* Página correspondente ao link selecionado é exibida aqui. */ }
+                <div className="side"></div>
             </div>
         </div>
     )

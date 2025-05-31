@@ -1,4 +1,5 @@
 import axios from "axios"
+import '../Layout/Layout.scss'
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -23,18 +24,20 @@ export default function Game(){
 
     // retorna tabela HTML contendo os dados dos produtos obtidos na API
     return (
-        <div>
-            <Link to='/game/create'>New</Link>
-            <table>
+        <div className="body">
+            <Link to='/game/create' className="link">New</Link>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>rentValue</th>
-                        <th>platform</th>
-                        <th>genre</th>
-                        <th>releaseDate</th>
-                        <th>isRented</th>
+                        <th>Rent Value</th>
+                        <th>Platform</th>
+                        <th>Genre</th>
+                        <th>Release Date</th>
+                        <th>Rented</th>
+                        <th>Click to update</th>
+                        <th>Click to delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,13 +51,13 @@ export default function Game(){
                             <td>{game.genre}</td>
                             <td>{game.releaseDate}</td>
                             <td>{game.isRented}</td>
-                            <td><Link to={"/game/update/" + game.id}>Update</Link></td>
-                            <td><Link to={"/game/delete/" + game.id}>Delete</Link></td>
+                            <td><Link to={"/game/update/" + game.id} className="link">Update</Link></td>
+                            <td><Link to={"/game/delete/" + game.id} className="link">Delete</Link></td>
                             </tr>)
                     }
                 </tbody>
             </table>
-            <Link to="/">Back</Link>
+            <Link to="/" className="link">Back</Link>
         </div>
     )
 }

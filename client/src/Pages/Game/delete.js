@@ -35,9 +35,8 @@ export default function GameDelete(){
     return (
         <div>
             <h3>{game.name}</h3>
-            { status != 'Game excluded' ? <button onClick={confirm} disabled={botaoStatus}>Confirm deletion</button> : "Game not Excluded"}
-            <Link to="/game">Back</Link>
-            <h3>{status}</h3>
+            { status != 'Game excluded' ? <button onClick={confirm} disabled={botaoStatus}>Confirm deletion</button> : <h3>{status}</h3>}
+            <Link to="/game" className="lBack">Back</Link>
         </div>
     )
 
